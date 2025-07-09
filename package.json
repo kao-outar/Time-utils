@@ -1,0 +1,28 @@
+{
+  "name": "time-utils",
+  "version": "1.0.0",
+  "description": "Une librairie qui gère des fonctions de manipulation de temps (durées, formats, arrondis, etc.)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["time", "date", "duration", "format", "utils"],
+  "authors": [
+    "Kaoutar",
+    "Binôme 1", 
+    "Binôme 2"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+} 
