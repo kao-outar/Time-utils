@@ -85,5 +85,5 @@ Ce projet est ouvert aux contributions. N'hésitez pas à proposer des améliora
 
 **Auteurs :**
 - Kaoutar
-- Binôme 1
-- Binôme 2
+- Garance
+- Omar
