@@ -2,11 +2,12 @@ export function padZero(value: number): string {
   return value.toString().padStart(2, '0');
 }
 
-export function isValidDate(value: any): boolean {
-  return value instanceof Date && !isNaN(value.getTime());
+export function isValidDate(value: Date | string | number): boolean {
+  const date = new Date(value);
+  return date instanceof Date && !isNaN(date.getTime());
 }
 
-export function toDate(value: any): Date | null {
+export function toDate(value: Date | string | number): Date | null {
   if (value instanceof Date && isValidDate(value)) return value;
 
   const parsed = new Date(value);
