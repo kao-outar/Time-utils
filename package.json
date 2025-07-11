@@ -1,6 +1,6 @@
 {
   "name": "@gualepouce/time-utils",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Une librairie qui gère des fonctions de manipulation de temps (durées, formats, arrondis, etc.)",
   "type": "module",
   "main": "dist/index.js",
