@@ -59,10 +59,73 @@ const heureDeFin = addMinutes(maintenant, 45);
 console.log(`La réunion se terminera à ${heureDeFin.toLocaleTimeString()}`);
 ```
 
----
+### `diffInDays(date1, date2)`
 
-*Note : D'autres fonctions comme `isPast`, `diffInDays`, `formatDate` seront ajoutées par le reste de l'équipe.*
+**Objectif :** Calculer le nombre de jours entiers entre deux dates.
 
+**Exemples d'utilisation :**
+- Savoir combien de jours il reste avant un événement.
+- Calculer l'âge en jours.
+- Générer des rapports de délais ou de rétention.
+
+**Utilisation :**
+```typescript
+import { diffInDays } from 'time-utils';
+
+const joursRestants = diffInDays(new Date('2025-07-20'), new Date('2025-07-11'));
+console.log(joursRestants); // Output: 9
+```
+
+### `isPast(date)`
+
+**Objectif :** Vérifier si une date donnée est dans le passé par rapport à maintenant.
+
+**Exemples d'utilisation :**
+- Désactiver un bouton si la date d’expiration est passée.
+- Filtrer les événements terminés.
+
+**Utilisation :**
+```typescript
+import { isPast } from 'time-utils';
+
+console.log(isPast(new Date('2000-01-01'))); // Output: true
+```
+
+### `formatDate(date, format?)`
+
+**Objectif :** Formater une date en chaîne lisible, avec un format personnalisable (par exemple : `DD/MM/YYYY`, `YYYY-MM-DD`, etc.).
+
+**Exemples d'utilisation :**
+- Afficher des dates dans l’interface utilisateur.
+- Générer des rapports ou des exports.
+
+**Utilisation :**
+```typescript
+import { formatDate } from 'time-utils';
+
+console.log(formatDate(new Date('2025-07-11'), 'DD/MM/YYYY')); // Output: "11/07/2025"
+```
+### `utils`
+
+**Objectif :** Module regroupant des fonctions utilitaires diverses liées au temps et aux dates.
+
+**Fonctions principales :**
+- `padZero(value: number)`: Ajoute un zéro devant un nombre si besoin (ex : 5 → "05").
+- `isValidDate(value: any)`: Vérifie si la valeur est une date valide.
+- `toDate(value: any)`: Convertit une valeur en objet Date si possible, sinon retourne `null`.
+- `normalizeDate(date: Date)`: Retourne une copie de la date avec l'heure à minuit (utile pour comparer uniquement les jours).
+- `TIME_CONSTANTS`: Constantes utiles pour les conversions de temps (secondes, minutes, heures, jours).
+
+**Exemples d'utilisation :**
+```typescript
+import { utils } from 'time-utils';
+
+console.log(utils.padZero(7)); // "07"
+console.log(utils.isValidDate(new Date())); // true
+console.log(utils.toDate("2025-07-11")); // Date object
+console.log(utils.normalizeDate(new Date())); // Date à minuit
+console.log(utils.TIME_CONSTANTS.SECONDS_IN_MINUTE); // 60
+```
 ---
 
 ## 🧪 Tests
