@@ -1,5 +1,9 @@
 # time-utils 🕒
 
+[![NPM Version](https://img.shields.io/npm/v/@gualepouce/time-utils)](https://www.npmjs.com/package/@gualepouce/time-utils)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/kao-outar/Time-utils/actions)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
+
 Une librairie TypeScript simple et efficace pour manipuler le temps, les dates et les durées.
 
 ---
